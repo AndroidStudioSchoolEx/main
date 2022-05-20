@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.20080321285140562" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/activity_main.xml" value="0.2504528985507246" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/fragment_dashboard.xml" value="0.2504528985507246" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/fragment_home.xml" value="0.2504528985507246" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/fragment_notifications.xml" value="0.2504528985507246" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/item_dropdown.xml" value="0.2504528985507246" />
+        <entry key="..\:/Workplace/AndroidWorkplace/groupStudy/app/src/main/res/layout/item_select.xml" value="0.2504528985507246" />
       </map>
     </option>
   </component>
