@@ -34,14 +34,14 @@ public class DashboardFragment extends Fragment {
         String[] items2 = getResources().getStringArray(R.array.age);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(getActivity(), R.layout.item_select, items2);
         adapter.setDropDownViewResource(R.layout.item_dropdown);
-        spinner2.setAdapter(adapter);
+        spinner2.setAdapter(adapter2);
         spinner2.setSelection(0);
 
         Spinner spinner3 = binding.spHospital;
         String[] items3 = getResources().getStringArray(R.array.hospital);
         ArrayAdapter<String> adapter3 = new ArrayAdapter<>(getActivity(), R.layout.item_select, items3);
         adapter.setDropDownViewResource(R.layout.item_dropdown);
-        spinner3.setAdapter(adapter);
+        spinner3.setAdapter(adapter3);
         spinner3.setSelection(0);
 
         return root;
