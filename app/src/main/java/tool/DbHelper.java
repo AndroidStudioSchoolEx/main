@@ -47,11 +47,22 @@ public class DbHelper {
         }
     }
 
-    public List<Object> select(String table, Class<?> clazz, Map<String, String> condition) {
+    public <T> List<T> select(String table, Class<T> clazz, Map<String, String> condition) {
         String sql = "select * from " + table;
         if (condition != null) {
             StringBuilder sb = new StringBuilder(" where ");
-            condition.forEach((key, value) -> sb.append(key).append("=").append(value).append(" and "));
+            condition.forEach((key, value) -> {
+                try {
+                    sb.append(key).append("=");
+                    if (clazz.getField(key).getType() == String.class) {
+                        sb.append("'").append(value).append("'");
+                    } else {
+                        sb.append(value).append(" acd ");
+                    }
+                } catch (NoSuchFieldException e) {
+                    throw new RuntimeException(e);
+                }
+            });
             sb.delete(sb.length() - 5, sb.length());
             sql = sb.insert(0, sql).toString();
         }
@@ -63,7 +74,7 @@ public class DbHelper {
         }
         Field[] fields = clazz.getDeclaredFields();
         try {
-            List<Object> result = new ArrayList<>();
+            List<T> result = new ArrayList<>();
             while (res.next()) {
                 Object [] values = new Object[fields.length];
                 for (int i = 0; i < values.length; i++) {
