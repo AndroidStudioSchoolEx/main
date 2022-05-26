@@ -1,5 +1,9 @@
 package tool;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Field;
@@ -47,6 +51,7 @@ public class DbHelper {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public <T> List<T> select(String table, Class<T> clazz, Map<String, String> condition) {
         String sql = "select * from " + table;
         if (condition != null) {
