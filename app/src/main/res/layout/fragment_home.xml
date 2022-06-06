@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,39 +7,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-197dp"
+        tools:layout_editor_absoluteY="89dp">
 
-        <TextView
-            android:id="@+id/text_home"
-            android:layout_width="408dp"
-            android:layout_height="435dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.538"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.427" />
-
-        <Button
-            android:id="@+id/common"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/common_string"
-            tools:layout_editor_absoluteX="158dp"
-            tools:layout_editor_absoluteY="205dp" />
-
-        <Button
-            android:id="@+id/expert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/expert_string"
-            tools:layout_editor_absoluteX="157dp"
-            tools:layout_editor_absoluteY="291dp" />
+        <ListView
+            android:id="@+id/doctor_doc"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:dividerHeight="5dp"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true" />
 
     </LinearLayout>
 

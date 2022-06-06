@@ -8,8 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
 import com.example.groupstudy.R;
 import com.example.groupstudy.ui.dashboard.pojo.Doctor;
 
