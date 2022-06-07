@@ -14,8 +14,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.groupstudy.R;
 import com.example.groupstudy.databinding.FragmentDashboardBinding;
-import com.example.groupstudy.ui.dashboard.adapter.DocListViewAdapter;
-import com.example.groupstudy.ui.dashboard.pojo.Doctor;
+import com.example.groupstudy.ui.dashboard.adapter.DocListAdapter;
+import com.example.groupstudy.ui.dashboard.pojo.Doc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,12 +54,20 @@ public class DashboardFragment extends Fragment {
         spinner3.setAdapter(adapter3);
         spinner3.setSelection(0);
 
-        ListView listView = binding.docLv;
-        List<Doctor> doctorList = new ArrayList<>();
-        doctorList.add(new Doctor(R.drawable.doc, "张三", "儿科", 3));
-        doctorList.add(new Doctor(R.drawable.doc, "李四", "内科", 5));
-        doctorList.add(new Doctor(R.drawable.doc, "王五", "妇科", 7));
-        listView.setAdapter(new DocListViewAdapter(getActivity(), doctorList));
+        ListView listView = binding.lvRecipe;
+        List<Doc> doctorList = new ArrayList<>();
+//        doctorList.add(new Doctor(0, "张三", "儿科", 3));
+//        doctorList.add(new Doctor(R.drawable.doc2, "李四", "内科", 5));
+//        doctorList.add(new Doctor(R.drawable.doc3, "王五", "妇科", 7));
+//        listView.setAdapter(new DocListViewAdapter(getActivity(), doctorList));
+//        listView.setAdapter(new DoctorAdapter(getContext(), doctorList));
+
+        ArrayList<Doc> planetList = Doc.getDefaultList();
+        DocListAdapter adapter4 = new DocListAdapter(getActivity(), planetList);
+        // 从布局视图中获取名叫lv_recipe的列表视图
+        listView = binding.lvRecipe;
+        // 给lv_recipe设置行星列表适配器
+        listView.setAdapter(adapter4);
 
         return root;
     }

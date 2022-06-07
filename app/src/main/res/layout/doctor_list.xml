@@ -5,37 +5,66 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="100dp"
+        android:id="@+id/doc_image"
+        android:layout_width="0dp"
         android:layout_height="100dp"
-        android:src="@drawable/doc"
-        android:id="@+id/doc_image"/>
+        android:layout_weight="1"
+        android:contentDescription="@string/doc_desc" />
 
-    <TextView
-        android:id="@+id/doc_name"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/doc_prof"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/doc_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
 
-    <TextView
-        android:id="@+id/doc_age"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:text="咨询"/>
+            <TextView
+                android:id="@+id/doc_prof"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/doc_age"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/doc_hospital"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/doc_btn"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="200dp"
+            android:text="@string/consult"/>
+    </LinearLayout>
 
 
 </LinearLayout>

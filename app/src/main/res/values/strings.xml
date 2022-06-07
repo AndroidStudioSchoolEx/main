@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">groupStudy</string>
     <string name="title_home">预约挂号</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_dashboard">专家问诊</string>
     <string name="title_notifications">Notifications</string>
     <string name="common_string">普通门诊预约</string>
     <string name="expert_string">专家门诊预约</string>
@@ -14,6 +14,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="doc_desc">医生照片</string>
+    <string name="consult">咨询</string>
 
     <string-array name="prof">
         <item>儿科</item>

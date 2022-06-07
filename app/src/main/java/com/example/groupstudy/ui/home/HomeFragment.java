@@ -26,12 +26,12 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        Button common = getActivity().findViewById(R.id.common);
-        common.setOnClickListener((v) -> {
-
-        });
+//        final TextView textView = binding.textHome;
+//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        Button common = getActivity().findViewById(R.id.common);
+//        common.setOnClickListener((v) -> {
+//
+//        });
         return root;
     }
 
