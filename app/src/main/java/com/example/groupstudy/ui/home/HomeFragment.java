@@ -32,11 +32,11 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        ArrayList<Doctor> planetList = (ArrayList<Doctor>) DbHelper.getInstance().select("doctor", Doctor.class, null);
-        ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
-        doctor_doc = binding.doctorDoc;
-        doctor_doc.setAdapter(adapter);
-        drawable = getResources().getDrawable(R.drawable.divider_red2);
+//        ArrayList<Doctor> planetList = (ArrayList<Doctor>) DbHelper.getInstance().select("doctor", Doctor.class, null);
+//        ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
+//        doctor_doc = binding.doctorDoc;
+//        doctor_doc.setAdapter(adapter);
+//        drawable = getResources().getDrawable(R.drawable.divider_red2);
         return root;
     }
 
