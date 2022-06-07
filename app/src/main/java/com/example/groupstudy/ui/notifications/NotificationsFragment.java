@@ -69,6 +69,7 @@ public class NotificationsFragment extends Fragment {
             "显示全部分隔线",
             "不显示分隔线",
     };
+
     class DividerSelectedListener implements AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
             int dividerHeight = 10;

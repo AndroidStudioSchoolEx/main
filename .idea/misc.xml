@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/activity_main.xml" value="0.37020316027088035" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/doc_list.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/doctor_list.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/expert_activity.xml" value="0.17083333333333334" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/item_list.xml" value="0.17083333333333334" />
+        <entry key="..\:/AndroidStudioProjects/groupStudy/app/src/main/res/layout/item_select.xml" value="0.17083333333333334" />
         <entry key="..\:/Download_Code/AndroidStudioProjectNew/groupStudy/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="..\:/Download_Code/AndroidStudioProjectNew/groupStudy/app/src/main/res/layout/fragment_dashboard.xml" value="0.25364583333333335" />
         <entry key="..\:/Download_Code/AndroidStudioProjectNew/groupStudy/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
