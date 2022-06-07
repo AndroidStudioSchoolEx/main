@@ -70,7 +70,7 @@ public class NotificationsFragment extends Fragment {
 
     private String[] dividerArray = {
             "提瓦特幻想美食",
-            "不显示分隔线",
+            "提瓦特上流饮品",
     };
     class DividerSelectedListener implements AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
@@ -79,11 +79,20 @@ public class NotificationsFragment extends Fragment {
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 //            lv_recipe.setDivider(drawable);  // 设置lv_recipe的分隔线
 //            lv_recipe.setDividerHeight(dividerHeight);  // 设置lv_recipe的分隔线高度
+            lv_recipe.setAdapter(adapter);
+            // 给lv_recipe设置列表项的点击监听器
+            lv_recipe.setOnItemClickListener(adapter);
+            // 给lv_recipe设置列表项的长按监听器
+            lv_recipe.setOnItemLongClickListener(adapter);
             lv_recipe.setDivider(null);
             lv_recipe.setPadding(0, 0, 0, 0);  // 设置lv_recipe的四周空白
             lv_recipe.setBackgroundColor(Color.TRANSPARENT);  // 设置lv_recipe的背景颜色
             if (arg2 == 1) {
-
+                lv_recipe.setAdapter(adapter2);
+                // 给lv_recipe设置列表项的点击监听器
+                lv_recipe.setOnItemClickListener(adapter2);
+                // 给lv_recipe设置列表项的长按监听器
+                lv_recipe.setOnItemLongClickListener(adapter2);
             }
             lv_recipe.setLayoutParams(params);  // 设置lv_recipe的布局参数
         }
@@ -110,11 +119,11 @@ public class NotificationsFragment extends Fragment {
         // 从布局视图中获取名叫lv_recipe的列表视图
         lv_recipe = binding.lvRecipe;
         // 给lv_recipe设置行星列表适配器
-        lv_recipe.setAdapter(adapter2);
+        lv_recipe.setAdapter(adapter);
         // 给lv_recipe设置列表项的点击监听器
-        lv_recipe.setOnItemClickListener(adapter2);
+        lv_recipe.setOnItemClickListener(adapter);
         // 给lv_recipe设置列表项的长按监听器
-        lv_recipe.setOnItemLongClickListener(adapter2);
+        lv_recipe.setOnItemLongClickListener(adapter);
         // 从资源文件中获取分隔线的图形对象
         drawable = getResources().getDrawable(R.drawable.divider_red2);
         // 初始化分隔线下拉框

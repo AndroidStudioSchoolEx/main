@@ -16,16 +16,16 @@ public class Recipe2 {
         this.desc = desc;
     }
 
-    private static int[] iconArray = {R.drawable.dudulianhaixiangeng, R.drawable.tiwatejiandan, R.drawable.lengroupinpan,
-            R.drawable.feiyushijindai, R.drawable.mengdetudoubing, R.drawable.beidiyanxunji};
-    private static String[] nameArray = {"1嘟嘟莲海鲜羹1", "提瓦特煎蛋", "冷肉拼盘", "翡玉什锦袋", "蒙德土豆饼", "北地烟熏鸡"};
+    private static int[] iconArray = {R.drawable.shumeiboheyin, R.drawable.haidengjieteseqindangeng, R.drawable.pinguoniang,
+            R.drawable.haidengjietedebaiyutang, R.drawable.binggougouguozhi, R.drawable.shengshui};
+    private static String[] nameArray = {"树莓薄荷饮", "海灯节特色禽蛋羹", "苹果酿", "海灯节特色白玉汤", "冰钩钩果汁", "圣水"};
     private static String[] descArray = {
-            "达达利亚的特色料理。如同血海中漂泊的困兽，在垂死时发出人耳所不能闻的哀嚎....不过达达利亚却笑着解释说，只是海钓的战利品加了一些老家特产而已。",
-            "班尼特的特色料理。不知道为什么每份煎蛋边缘都是焦焦的，但焦脆也带来了别具一格的风味",
-            "菲谢尔的特色料理。精美的摆盘中似乎传言着某种不为人知的深奥。如果在享受美味的同时看向菲谢尔的话，能透过她半遮脸庞的指尖看到她期待的眼神…这也是秘密的一部分吗？",
-            "造型精致的菜肴。咬开白嫩菜叶，鲜香火腿融合脆爽莲子丝丝入味。浓厚高汤犹如暮光倾泻，而舌尖则悠然快哉泛舟湖上。",
-            "雷泽的特色料理。被小心翼翼捏成狼爪形状的土豆饼，朴实中带着香甜，能够品尝出他对于人类料理的努力.",
-            "蔬菜搭配熏制好的禽肉。完美的口感让人用这道料理招待一国之主也能保持自信。"
+            "清新时尚的无酒精饮品。十分提神的薄荷饮料，用树莓加以装饰，散发着雅致的清香。",
+            "为庆祝海灯节而制作的传统佳肴.色泽澄澈金黄的禽蛋羹上点缀了几颗莲子。不管是作为早餐还是饭后点心，都能补充身体所需的优质营养。",
+            "清新时尚的无酒精饮品。据说有很不错的醒酒功效，酒客们常点一杯作为聚会结束的标志。",
+            "为庆祝海灯节而制作的传统佳肴。热水烧开后，将金鱼草、豆腐和莲子下锅齐煮。因其造型寓意而被戏称为「珍珠翡翠白玉汤」，实质上是一道非常家常的菜品。",
+            "清新时尚的无酒精饮品。在鲜榨的钩钩果汁中放入冰块并稍加调制，泛起梦幻般的紫色。",
+            "质地透亮，无色无杂质的一小瓶液体。看起来与清泉水无异的这一瓶，真的值得你寄予厚望吗?"
     };
 
     public static ArrayList<Recipe2> getDefaultList() {
