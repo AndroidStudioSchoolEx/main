@@ -34,6 +34,9 @@ public class NotificationsFragment extends Fragment {
     private ListView lv_recipe; // 声明一个列表视图对象
     private Drawable drawable;  // 声明一个图形对象
 
+    RecipeListAdapter adapter;
+    RecipeListAdapter2 adapter2;
+
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -66,21 +69,21 @@ public class NotificationsFragment extends Fragment {
     }
 
     private String[] dividerArray = {
-            "显示全部分隔线",
+            "提瓦特幻想美食",
             "不显示分隔线",
     };
-
     class DividerSelectedListener implements AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
             int dividerHeight = 10;
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            lv_recipe.setDivider(drawable);  // 设置lv_recipe的分隔线
-            lv_recipe.setDividerHeight(dividerHeight);  // 设置lv_recipe的分隔线高度
+//            lv_recipe.setDivider(drawable);  // 设置lv_recipe的分隔线
+//            lv_recipe.setDividerHeight(dividerHeight);  // 设置lv_recipe的分隔线高度
+            lv_recipe.setDivider(null);
             lv_recipe.setPadding(0, 0, 0, 0);  // 设置lv_recipe的四周空白
             lv_recipe.setBackgroundColor(Color.TRANSPARENT);  // 设置lv_recipe的背景颜色
             if (arg2 == 1) {
-                lv_recipe.setDivider(null);
+
             }
             lv_recipe.setLayoutParams(params);  // 设置lv_recipe的布局参数
         }
@@ -100,16 +103,18 @@ public class NotificationsFragment extends Fragment {
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         ArrayList<Recipe> planetList = Recipe.getDefaultList();
+        ArrayList<Recipe2> planetList2 = Recipe2.getDefaultList();
         // 构建一个行星队列的列表适配器
-        RecipeListAdapter adapter = new RecipeListAdapter(getActivity(), planetList);
+         adapter = new RecipeListAdapter(getActivity(), planetList);
+         adapter2 = new RecipeListAdapter2(getActivity(), planetList2);
         // 从布局视图中获取名叫lv_recipe的列表视图
         lv_recipe = binding.lvRecipe;
         // 给lv_recipe设置行星列表适配器
-        lv_recipe.setAdapter(adapter);
+        lv_recipe.setAdapter(adapter2);
         // 给lv_recipe设置列表项的点击监听器
-        lv_recipe.setOnItemClickListener(adapter);
+        lv_recipe.setOnItemClickListener(adapter2);
         // 给lv_recipe设置列表项的长按监听器
-        lv_recipe.setOnItemLongClickListener(adapter);
+        lv_recipe.setOnItemLongClickListener(adapter2);
         // 从资源文件中获取分隔线的图形对象
         drawable = getResources().getDrawable(R.drawable.divider_red2);
         // 初始化分隔线下拉框

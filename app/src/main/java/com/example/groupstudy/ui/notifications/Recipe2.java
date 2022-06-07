@@ -5,12 +5,12 @@ import com.example.groupstudy.R;
 
 import java.util.ArrayList;
 
-public class Recipe {
+public class Recipe2 {
     public int image;
     public String name;
     public String desc;
 
-    public Recipe(int image, String name, String desc) {
+    public Recipe2(int image, String name, String desc) {
         this.image = image;
         this.name = name;
         this.desc = desc;
@@ -18,7 +18,7 @@ public class Recipe {
 
     private static int[] iconArray = {R.drawable.dudulianhaixiangeng, R.drawable.tiwatejiandan, R.drawable.lengroupinpan,
             R.drawable.feiyushijindai, R.drawable.mengdetudoubing, R.drawable.beidiyanxunji};
-    private static String[] nameArray = {"嘟嘟莲海鲜羹", "提瓦特煎蛋", "冷肉拼盘", "翡玉什锦袋", "蒙德土豆饼", "北地烟熏鸡"};
+    private static String[] nameArray = {"1嘟嘟莲海鲜羹1", "提瓦特煎蛋", "冷肉拼盘", "翡玉什锦袋", "蒙德土豆饼", "北地烟熏鸡"};
     private static String[] descArray = {
             "达达利亚的特色料理。如同血海中漂泊的困兽，在垂死时发出人耳所不能闻的哀嚎....不过达达利亚却笑着解释说，只是海钓的战利品加了一些老家特产而已。",
             "班尼特的特色料理。不知道为什么每份煎蛋边缘都是焦焦的，但焦脆也带来了别具一格的风味",
@@ -28,11 +28,11 @@ public class Recipe {
             "蔬菜搭配熏制好的禽肉。完美的口感让人用这道料理招待一国之主也能保持自信。"
     };
 
-    public static ArrayList<Recipe> getDefaultList() {
-        ArrayList<Recipe> recipeList = new ArrayList<Recipe>();
+    public static ArrayList<Recipe2> getDefaultList() {
+        ArrayList<Recipe2> recipeList2 = new ArrayList<Recipe2>();
         for (int i = 0; i < iconArray.length; i++) {
-            recipeList.add(new Recipe(iconArray[i], nameArray[i], descArray[i]));
+            recipeList2.add(new Recipe2(iconArray[i], nameArray[i], descArray[i]));
         }
-        return recipeList;
+        return recipeList2;
     }
 }

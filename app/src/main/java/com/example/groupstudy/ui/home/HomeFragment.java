@@ -34,9 +34,9 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 //        ArrayList<Doctor> planetList = (ArrayList<Doctor>) DbHelper.getInstance().select("doctor", Doctor.class, null);
 //        ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
-//        doctor_doc = binding.doctorDoc;
+        doctor_doc = binding.doctorDoc;
 //        doctor_doc.setAdapter(adapter);
-//        drawable = getResources().getDrawable(R.drawable.divider_red2);
+        drawable = getResources().getDrawable(R.drawable.divider_red2);
         return root;
     }
 

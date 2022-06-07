@@ -19,10 +19,10 @@ import java.util.Map;
 
 public class DbHelper {
 
-    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/db_android?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf-8";
+    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    private static final String DB_URL = "jdbc:mysql://8.130.17.147:3306/db_android?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf-8";
     private static final String USER = "root";
-    private static final String PASS = "15935712345";
+    private static final String PASS = "123456";
     private Connection connection = null;
     private PreparedStatement statement = null;
     private ResultSet res = null;
