@@ -15,28 +15,21 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="doc_desc">医生照片</string>
-    <string name="consult">咨询</string>
+    <string name="consult">留言</string>
     <string name="appointment">预约</string>
 
-    <string-array name="prof">
+    <string-array name="type">
+        <item>全部</item>
         <item>儿科</item>
         <item>妇科</item>
-        <item>口腔科</item>
-        <item>内科</item>
-        <item>外科 </item>
+        <item>外科</item>
+        <item>肛肠科</item>
     </string-array>
 
-    <string-array name="age">
-        <item>小于1年</item>
-        <item>2~5年</item>
-        <item>6~10年</item>
-        <item>大于10年</item>
+    <string-array name="level">
+        <item>全部</item>
+        <item>医师</item>
+        <item>专家</item>
     </string-array>
 
-    <string-array name="hospital">
-        <item>上海市第一人民医院</item>
-        <item>上海市第二人民医院</item>
-        <item>上海市第三人民医院</item>
-        <item>上海市第四人民医院</item>
-    </string-array>
 </resources>

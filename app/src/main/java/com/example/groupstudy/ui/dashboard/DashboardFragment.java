@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -15,15 +16,17 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.groupstudy.R;
 import com.example.groupstudy.databinding.FragmentDashboardBinding;
 import com.example.groupstudy.ui.dashboard.adapter.DocListAdapter;
-import com.example.groupstudy.ui.dashboard.pojo.Doc;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import pojo.Doctor;
+import tool.DbHelper;
 
 
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
+    private ArrayList<Doctor> doctorList = DbHelper.getInstance().select("doc");
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,39 +36,84 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Spinner spinner1 = binding.spProf;
-        String[] items1 = getResources().getStringArray(R.array.prof);
+        Spinner spinner1 = binding.spLevel;
+        String[] items1 = getResources().getStringArray(R.array.level);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), R.layout.item_select, items1);
         adapter.setDropDownViewResource(R.layout.item_dropdown);
         spinner1.setAdapter(adapter);
         spinner1.setSelection(0);
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0){
+                    doctorList = DbHelper.getInstance().select("doc");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 1){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "医师");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 2){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "专家");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                }
+            }
 
-        Spinner spinner2 = binding.spAge;
-        String[] items2 = getResources().getStringArray(R.array.age);
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        Spinner spinner2 = binding.spType;
+        String[] items2 = getResources().getStringArray(R.array.type);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(getActivity(), R.layout.item_select, items2);
         adapter.setDropDownViewResource(R.layout.item_dropdown);
         spinner2.setAdapter(adapter2);
         spinner2.setSelection(0);
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0){
+                    doctorList = DbHelper.getInstance().select("doc");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 1){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "儿科");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 2){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "妇科");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 3){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "外科");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                } else if (i == 4){
+                    doctorList = DbHelper.getInstance().selectByCondition("doc", "肛肠科");
+                    DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+                    ListView listView = binding.lvDocList;
+                    listView.setAdapter(adapter4);
+                }
+            }
 
-        Spinner spinner3 = binding.spHospital;
-        String[] items3 = getResources().getStringArray(R.array.hospital);
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(getActivity(), R.layout.item_select, items3);
-        adapter.setDropDownViewResource(R.layout.item_dropdown);
-        spinner3.setAdapter(adapter3);
-        spinner3.setSelection(0);
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
-        ListView listView = binding.lvRecipe;
-//        doctorList.add(new Doctor(0, "张三", "儿科", 3));
-//        doctorList.add(new Doctor(R.drawable.doc2, "李四", "内科", 5));
-//        doctorList.add(new Doctor(R.drawable.doc3, "王五", "妇科", 7));
-//        listView.setAdapter(new DocListViewAdapter(getActivity(), doctorList));
-//        listView.setAdapter(new DoctorAdapter(getContext(), doctorList));
+            }
+        });
 
-        ArrayList<Doc> planetList = Doc.getDefaultList();
-        DocListAdapter adapter4 = new DocListAdapter(getActivity(), planetList);
-        // 从布局视图中获取名叫lv_recipe的列表视图
-        listView = binding.lvRecipe;
-        // 给lv_recipe设置行星列表适配器
+        DocListAdapter adapter4 = new DocListAdapter(getActivity(), doctorList);
+        ListView listView = binding.lvDocList;
         listView.setAdapter(adapter4);
 
         return root;

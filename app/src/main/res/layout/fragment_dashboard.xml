@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <Spinner
-            android:id="@+id/sp_prof"
+            android:id="@+id/sp_level"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:spinnerMode="dropdown" />
 
         <Spinner
-            android:id="@+id/sp_age"
+            android:id="@+id/sp_type"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,22 +29,8 @@
 
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/sp_hospital"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:spinnerMode="dropdown" />
-
-
-            <!--        <ListView-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:id="@+id/doc_lv">-->
-            <!--        </ListView>-->
-
     <ListView
-        android:id="@+id/lv_recipe"
+        android:id="@+id/lv_docList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

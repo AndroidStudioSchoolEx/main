@@ -179,5 +179,25 @@ public class DbHelper {
             add(new Doctor(100004, "王可服", "医师", "外科"));
         }};
     }
+    public ArrayList<Doctor> selectByCondition(String table, String condition) {
+        ArrayList<Doctor> list = new ArrayList<>();
+        if ("医师".equals(condition)){
+            list.add(new Doctor(100002, "张红", "医师", "肛肠科"));
+            list.add(new Doctor(100004, "王可服", "医师", "外科"));
+        } else if ("专家".equals(condition)){
+            list.add(new Doctor(100001, "李华", "专家", "儿科"));
+            list.add(new Doctor(100003, "杨佳玮", "专家", "妇科"));
+        } else if ("儿科".equals(condition)){
+            list.add(new Doctor(100001, "李华", "专家", "儿科"));
+        } else if ("肛肠科".equals(condition)){
+            list.add(new Doctor(100002, "张红", "医师", "肛肠科"));
+        } else if ("妇科".equals(condition)){
+            list.add(new Doctor(100003, "杨佳玮", "专家", "妇科"));
+        } else if ("外科".equals(condition)){
+            list.add(new Doctor(100004, "王可服", "医师", "外科"));
+        }
+        return list;
+    }
+
 
 }
