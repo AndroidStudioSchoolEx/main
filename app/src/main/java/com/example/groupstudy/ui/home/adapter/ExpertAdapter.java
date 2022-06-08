@@ -16,21 +16,21 @@ import pojo.Doctor;
 
 public class ExpertAdapter extends BaseAdapter {
 
-    private Context mContext;
-    private ArrayList<Doctor> mRecipeList;
+    private Context context;
+    private ArrayList<Doctor> doctors;
 
     public ExpertAdapter(Context context, ArrayList<Doctor> list) {
-        mContext = context;
-        mRecipeList = list;
+        this.context = context;
+        doctors = list;
     }
 
     public int getCount() {
-        return mRecipeList.size();
+        return doctors.size();
     }
 
     // 获取列表项的数据
     public Object getItem(int arg0) {
-        return mRecipeList.get(arg0);
+        return doctors.get(arg0);
     }
 
     // 获取列表项的编号
@@ -40,25 +40,32 @@ public class ExpertAdapter extends BaseAdapter {
 
     // 获取指定位置的列表项视图
     public View getView(final int position, View convertView, ViewGroup parent) {
-        ExpertAdapter.ViewHolder holder;
+        ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list, null);
-            holder.icon = convertView.findViewById(R.id.doc_img);
-            holder.name = convertView.findViewById(R.id.doc_n);
+            convertView = LayoutInflater.from(context).inflate(R.layout.doc_list, null);
+            holder.doctor_image = convertView.findViewById(R.id.doctor_image);
+            holder.doctor_name = convertView.findViewById(R.id.doctor_name);
+            holder.doctor_level = convertView.findViewById(R.id.doctor_level);
+            holder.doctor_type = convertView.findViewById(R.id.doctor_type);
             convertView.setTag(holder);
-        } else {
-            holder = (ExpertAdapter.ViewHolder) convertView.getTag();
         }
-        Doctor doctor = mRecipeList.get(position);
-        holder.icon.setImageResource(R.drawable.doc);
-        holder.name.setText(doctor.getName());
+        else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        Doctor doctor = doctors.get(position);
+        holder.doctor_image.setImageResource(R.drawable.doc);
+        holder.doctor_name.setText(doctor.getName());
+        holder.doctor_level.setText(doctor.getLevel());
+        holder.doctor_type.setText(doctor.getType());
         return convertView;
     }
 
-    public static final class ViewHolder {
-        public ImageView icon;
-        public TextView name;
+    public final class ViewHolder {
+        public ImageView doctor_image;
+        public TextView doctor_name;
+        public TextView doctor_level;
+        public TextView doctor_type;
     }
 
 }

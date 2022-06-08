@@ -23,8 +23,6 @@ import tool.DbHelper;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    private Drawable drawable;
-    private ListView doctor_doc;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,11 +30,10 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-//        ArrayList<Doctor> planetList = (ArrayList<Doctor>) DbHelper.getInstance().select("doctor", Doctor.class, null);
-//        ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
-        doctor_doc = binding.doctorDoc;
-//        doctor_doc.setAdapter(adapter);
-        drawable = getResources().getDrawable(R.drawable.divider_red2);
+        ListView doctor_list;
+        ArrayList<Doctor> planetList = DbHelper.getInstance().select("doc");
+        ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
+
         return root;
     }
 

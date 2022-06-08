@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import pojo.Doctor;
+
 public class DbHelper {
 
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -51,7 +53,6 @@ public class DbHelper {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public <T> List<T> select(String table, Class<T> clazz, Map<String, String> condition) {
         String sql = "select * from " + table;
         if (condition != null) {
@@ -129,8 +130,8 @@ public class DbHelper {
                 statement.setObject(i + 1, values[i]);
             }
             return statement.execute();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         }
     }
@@ -169,4 +170,14 @@ public class DbHelper {
             throwables.printStackTrace();
         }
     }
+
+    public ArrayList<Doctor> select(String table) {
+        return new ArrayList<Doctor>(){{
+            add(new Doctor(100001, "李华", "专家", "儿科"));
+            add(new Doctor(100002, "张红", "医师", "肛肠科"));
+            add(new Doctor(100003, "杨佳玮", "专家", "妇科"));
+            add(new Doctor(100004, "王可服", "医师", "外科"));
+        }};
+    }
+
 }

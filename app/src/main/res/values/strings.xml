@@ -16,6 +16,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="doc_desc">医生照片</string>
     <string name="consult">咨询</string>
+    <string name="appointment">预约</string>
 
     <string-array name="prof">
         <item>儿科</item>

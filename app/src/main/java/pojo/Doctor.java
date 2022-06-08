@@ -14,6 +14,10 @@ public class Doctor {
         this.type = type;
     }
 
+    public Doctor() {
+        super();
+    }
+
     public Integer getId() {
         return id;
     }

@@ -55,8 +55,7 @@ public class DashboardFragment extends Fragment {
         spinner3.setSelection(0);
 
         ListView listView = binding.lvRecipe;
-        List<Doc> doctorList = new ArrayList<>();
-//        doctorList.add(new Doctor(0, "张三", "儿科", 3));
+        //        doctorList.add(new Doctor(0, "张三", "儿科", 3));
 //        doctorList.add(new Doctor(R.drawable.doc2, "李四", "内科", 5));
 //        doctorList.add(new Doctor(R.drawable.doc3, "王五", "妇科", 7));
 //        listView.setAdapter(new DocListViewAdapter(getActivity(), doctorList));
