@@ -33,7 +33,8 @@ public class HomeFragment extends Fragment {
         ListView doctor_list;
         ArrayList<Doctor> planetList = DbHelper.getInstance().select("doc");
         ExpertAdapter adapter = new ExpertAdapter(getActivity(), planetList);
-
+        doctor_list = binding.doctorDoc;
+        doctor_list.setAdapter(adapter);
         return root;
     }
 
