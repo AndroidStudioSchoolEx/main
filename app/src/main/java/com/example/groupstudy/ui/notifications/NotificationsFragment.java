@@ -37,26 +37,6 @@ public class NotificationsFragment extends Fragment {
     RecipeListAdapter adapter;
     RecipeListAdapter2 adapter2;
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        ArrayList<Recipe> planetList = Recipe.getDefaultList();
-//        // 构建一个行星队列的列表适配器
-//        RecipeListAdapter adapter = new RecipeListAdapter(getActivity(), planetList);
-//        // 从布局视图中获取名叫lv_recipe的列表视图
-//        lv_recipe = binding.lvRecipe;
-//        // 给lv_recipe设置行星列表适配器
-//        lv_recipe.setAdapter(adapter);
-//        // 给lv_recipe设置列表项的点击监听器
-//        lv_recipe.setOnItemClickListener(adapter);
-//        // 给lv_recipe设置列表项的长按监听器
-//        lv_recipe.setOnItemLongClickListener(adapter);
-//        // 从资源文件中获取分隔线的图形对象
-//        drawable = getResources().getDrawable(R.drawable.divider_red2);
-//        // 初始化分隔线下拉框
-//        initDividerSpinner();
-//    }
-
     // 初始化分隔线显示方式的下拉框
     private void initDividerSpinner() {
         ArrayAdapter<String> dividerAdapter = new ArrayAdapter<String>(getActivity(),
