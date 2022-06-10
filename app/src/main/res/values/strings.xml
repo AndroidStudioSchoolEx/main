@@ -2,7 +2,7 @@
     <string name="app_name">groupStudy</string>
     <string name="title_home">预约挂号</string>
     <string name="title_dashboard">专家问诊</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">食谱菜单</string>
     <string name="common_string">普通门诊预约</string>
     <string name="expert_string">专家门诊预约</string>
     <string name="title_activity_login">LoginActivity</string>
